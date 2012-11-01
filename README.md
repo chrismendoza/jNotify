@@ -1,4 +1,4 @@
 jqNotify
 ========
 
-A simple javascript event manager utilizing jQuery
+A simple javascript event manager.

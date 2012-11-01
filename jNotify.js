@@ -50,6 +50,7 @@ jNotify = {
             this.events.events[event_idx].idx.push(listener_label);
             this.events.events[event_idx].listeners.push(listener);
         }
+        return listener_label;
     },
     'remove_listener': function (listen_for, listener_label) {
         var event_idx = this.events.idx.indexOf(listen_for);
@@ -63,7 +64,9 @@ jNotify = {
 
             this.events.events[event_idx].idx.splice(idx, 1);
             this.events.events[event_idx].listeners.splice(idx, 1);
+            return true;
         }
+        return false;
     },
     'signal': function (triggered, data) {
         var event_idx = this.events.idx.indexOf(triggered);

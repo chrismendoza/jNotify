@@ -12,7 +12,7 @@ A simple javascript event manager.
     That label can then be used to remove the listener at a later time if
     necessary.
 */
-assigned_label = jNotify.add_listener('eventname', callback, 'test_label');
+var assigned_label = jNotify.add_listener('eventname', callback, 'test_label');
 
 /*
     Remove Listener, returns true if the listener was found (and as a result
@@ -24,7 +24,7 @@ jNotify.remove_listener('eventname', label);
     Signal events, returns the dataobject with any modifications that might 
     have been made by the listeners.
 */
-dataobject = jNotify.signal('eventname', dataobject)
+var dataobject = jNotify.signal('eventname', dataobject)
 ```
 
 When a function receives a signal, it gets no arguments, instead, the triggered
